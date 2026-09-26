@@ -119,7 +119,7 @@ export const mockRooms: Room[] = (() => {
   for (let floor = 1; floor <= 4; floor++) {
     for (let n = 1; n <= 16; n++) {
       const number = `${floor}${String(n).padStart(2, "0")}`;
-      const status = roomStatuses[(floor * 5 + n * 3) % 3];
+      const status = roomStatuses[(floor * 5 + n * 3) % 3] as Room["status"];
       rooms.push({
         number,
         status,

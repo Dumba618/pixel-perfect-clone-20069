@@ -92,13 +92,13 @@ export function TasksTable({ tasks }: { tasks: Task[] }) {
               <td className="px-3 font-mono text-[11px] text-occupied">{t.id}</td>
               <td className="px-3 text-[13px] font-bold text-ink">{t.room}</td>
               <td className="px-3">
-                <Badge label={t.category} tone={catTone[t.category]} />
+                <Badge label={t.category} tone={catTone[t.category] ?? "var(--slate)"} />
               </td>
               <td className="max-w-[320px] truncate px-3 text-[12px] text-ink">{t.issue}</td>
               <td className="px-3">
                 <Badge
                   label={t.priority}
-                  tone={prioTone[t.priority]}
+                  tone={prioTone[t.priority] ?? "var(--slate)"}
                   blink={t.priority === "CRITICAL"}
                 />
               </td>
@@ -111,7 +111,7 @@ export function TasksTable({ tasks }: { tasks: Task[] }) {
                 </div>
               </td>
               <td className="px-3">
-                <Badge label={t.status} tone={statusTone[t.status]} />
+                <Badge label={t.status} tone={statusTone[t.status] ?? "var(--slate)"} />
               </td>
               <td className="px-3 text-[11px] text-slate">{t.created}</td>
             </tr>
@@ -148,7 +148,7 @@ export function ReservationsTable({ rows }: { rows: Reservation[] }) {
               <td className="px-3 text-[13px] font-bold text-ink">{r.room}</td>
               <td className="px-3 font-mono text-[11px] text-slate">{r.card}</td>
               <td className="px-3">
-                <Badge label={r.status} tone={statusTone[r.status]} />
+                <Badge label={r.status} tone={statusTone[r.status] ?? "var(--slate)"} />
               </td>
               <td className="px-3 text-right">
                 <button className="rounded-sm border border-border px-2 py-1 text-[11px] font-medium text-ink hover:bg-canvas">
