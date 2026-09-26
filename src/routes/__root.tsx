@@ -77,11 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "OPERA Cloud Property Management" },
+      {
+        name: "description",
+        content: "Oracle Hospitality OPERA Cloud PMS workspace for Grand Plaza Resort.",
+      },
+      { name: "author", content: "Oracle Hospitality" },
+      { property: "og:title", content: "OPERA Cloud Property Management" },
+      {
+        property: "og:description",
+        content: "Oracle Hospitality OPERA Cloud PMS workspace for Grand Plaza Resort.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
